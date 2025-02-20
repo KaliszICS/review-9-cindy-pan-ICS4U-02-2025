@@ -1,42 +1,43 @@
 public class PracticeProblem {
 
-	public static int lettersToFive(String word, char character){
+	public static int lettersToFive (String word, String character){
 		int instance=0;
-		//boolean existInstance = word.contains(character);
 		int currentAt=0;
 		int length = word.length();
-		//char test = character;
+		char test = character.charAt(0);
 
-		//if (existInstance=true){
 		while (currentAt<=length){
-			if (word.charAt(currentAt)==(character)){
+			if (word.charAt(currentAt)==(test)){
 				instance = instance +1;
 				currentAt = currentAt+1;
 			} else {
 				currentAt = currentAt+1;
 			}
-		//}
-	}
-		if (instance==5){
+		}
+		if ((instance==5)==true){
 			return (currentAt-1);
 		}
 		else{
 			return (-1);
 		}
 		
+		
 		}
 
-		public static int countLetter (String word, char character){
+		public static int countLetter(String word, String character){
 			int instance = 0;
+			boolean exist = word.contains(character);
 			int current = 0;
 			int length = word.length();
+			char checker = character.charAt(0);
+			if (exist==true){
 				while (current<=length){
-					if (character==word.charAt(current)){
+					if (checker==word.charAt(current)){
 						instance = instance+1;
 						current = current+1;
 					}
 				}
-			//}
+			}
 			return instance;
 			
 		}
