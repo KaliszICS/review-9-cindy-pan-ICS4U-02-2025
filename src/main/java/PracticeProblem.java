@@ -5,8 +5,9 @@ public class PracticeProblem {
 		int currentAt=0;
 		int length = word.length();
 		char test = character.charAt(0);
-
-		while (currentAt<=length){
+		
+		
+		while (currentAt<length && instance!=5){
 			if (word.charAt(currentAt)==(test)){
 				instance = instance +1;
 				currentAt = currentAt+1;
@@ -14,8 +15,9 @@ public class PracticeProblem {
 				currentAt = currentAt+1;
 			}
 		}
+		
 		if ((instance==5)==true){
-			return (currentAt-1);
+			return (currentAt);
 		}
 		else{
 			return (-1);
