@@ -32,10 +32,13 @@ public class PracticeProblem {
 			int length = word.length();
 			
 			if (exist==true){
-				while (current<=length){
+				while (current<length){
 					if (word.charAt(current)==character){
 						instance = instance+1;
 						current = current+1;
+					}
+					else {
+						current= current+1;
 					}
 				}
 			}
