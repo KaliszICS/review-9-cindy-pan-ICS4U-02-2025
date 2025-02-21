@@ -1,14 +1,12 @@
 public class PracticeProblem {
 
-	public static int lettersToFive (String word, String character){
+	public static int lettersToFive (String word, char character){
 		int instance=0;
 		int currentAt=0;
 		int length = word.length();
-		char test = character.charAt(0);
-		
 		
 		while (currentAt<length && instance!=5){
-			if (word.charAt(currentAt)==(test)){
+			if (word.charAt(currentAt)==(character)){
 				instance = instance +1;
 				currentAt = currentAt+1;
 			} else {
@@ -26,15 +24,16 @@ public class PracticeProblem {
 		
 		}
 
-		public static int countLetter(String word, String character){
+		public static int countLetter(String word, char character){
 			int instance = 0;
-			boolean exist = word.contains(character);
+			String help = String.valueOf(character);
+			boolean exist = word.contains(help);
 			int current = 0;
 			int length = word.length();
-			char checker = character.charAt(0);
+			
 			if (exist==true){
 				while (current<=length){
-					if (checker==word.charAt(current)){
+					if (word.charAt(current)==character){
 						instance = instance+1;
 						current = current+1;
 					}
